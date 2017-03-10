@@ -72,7 +72,23 @@ def customer_can_afford_pet?(customer, pet)
   customer[:cash] >= pet[:price] ? true : false 
 end
 
+def sell_pet_to_customer(shop_name, pet, customer)
+  # if there is no pet found, or not enough funds, return from function
+  return #some code here || #some here
 
+find_pet_by_name(shop_name, pet) 
+
+customer_can_afford_pet(customer, pet)
+
+
+amount = pet[:price]
+add_pet_to_customer(customer, pet)
+remove_pet_by_name(shop_name, pet)
+increase_pets_sold(shop_name, 1)
+add_or_remove_cash(shop_name, amount)
+
+
+end
 
 
 
