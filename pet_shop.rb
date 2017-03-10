@@ -53,3 +53,10 @@ def remove_pet_by_name(shopname, petname)
     end
   end
 end
+
+def add_pet_to_stock(shopname, newpet)
+  shopname[:pets] << newpet
+end
+
+
+
