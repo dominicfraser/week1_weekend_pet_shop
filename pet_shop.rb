@@ -29,7 +29,7 @@ def pets_by_breed(shopname, breed)
   petsarray = shopname[:pets]
   for pet in petsarray
     if pet[:breed] == breed
-      pet_name_of_same_breed += [:name]
+      pet_name_of_same_breed << pet
     end
   end
   return pet_name_of_same_breed
@@ -39,10 +39,17 @@ def find_pet_by_name(shopname, petname)
     petsarray = shopname[:pets]
   for pet in petsarray
     if pet[:name] == petname
-      individual_pet = {}
-      ##### cleaner way of doing this?
-      individual_pet = pet
+      return pet
     end
   end
-  return individual_pet
+  return nil
+end
+
+def remove_pet_by_name(shopname, petname)
+  petsarray = shopname[:pets]
+  for pet in petsarray
+    if pet[:name] == petname
+      petsarray.delete(pet)
+    end
+  end
 end
