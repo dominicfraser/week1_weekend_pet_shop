@@ -36,8 +36,7 @@ def pets_by_breed(shop_name, breed)
 end
 
 def find_pet_by_name(shop_name, pet_name)
-    petsarray = shop_name[:pets]
-  for pet in petsarray
+  for pet in shop_name[:pets]
     if pet[:name] == pet_name
       return pet
     end
@@ -46,8 +45,7 @@ def find_pet_by_name(shop_name, pet_name)
 end
 
 def remove_pet_by_name(shop_name, pet_name)
-  petsarray = shop_name[:pets]
-  for pet in petsarray
+  for pet in shop_name[:pets]
     if pet[:name] == pet_name
       petsarray.delete(pet)
     end
@@ -81,37 +79,6 @@ def sell_pet_to_customer(shop_name, pet, customer)
     increase_pets_sold(shop_name, 1)
     add_or_remove_cash(shop_name, amount)
 end
-
-
-
-
-
-# #find there is a pet 
-# find_pet_by_name(shop_name, pet_name)
-# #cust can afford it
-# customer_can_afford_pet?(customer, pet)
-#   #add pet to cx
-#   add_pet_to_customer(customer, new_pet)
-#   #remove pet from shop
-#   remove_pet_by_name(shop_name, pet_name)
-#   #increase pets sold
-#   increase_pets_sold(shop_name, amount)
-#     #remove money from cx
-
-#     #add money to shop
-#     add_or_remove_cash(shop_name, amount)
-
-# ---------------------
-
-  
-#       add pet to cx
-
-#       remove pet from shop
-
-#       increase pets sold
-
-#       add money to shop
-  
 
 
 
